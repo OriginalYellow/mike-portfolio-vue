@@ -23,19 +23,21 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/main.css'
+    'fullpage.js/dist/fullpage.min.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/fullpage', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules
@@ -45,8 +47,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    ['~/modules/fullpage/module.js', { animate: true }]
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration
