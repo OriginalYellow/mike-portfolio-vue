@@ -6,49 +6,44 @@
         :options="options"
       >
         <div class="section">
-          <div class="">
-            <div class="container mx-auto md:px-32 px-8">
-              <div class="flex justify-between py-24">
-                <div :style="{width: '100%'}">
-                  <p class="h3">
-                    hi, i'm mike
+          <div class="container mx-auto md:px-32 px-8">
+            <div class="flex justify-between py-24">
+              <div :style="{width: '100%'}">
+                <p class="h4">
+                  hi, i'm mike
+                </p>
+                <p class="body">
+                  And I like to build things.
+                </p>
+              </div>
+              <div
+                :style="{width: '100%'}"
+                class="flex flex-col justify-center"
+              >
+                <lego-grid
+                  class="mx-auto"
+                  :lego-bricks="brickList"
+                  :scaling-factor="scalingFactor"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="mx-auto py-32 container mx-auto md:px-32 px-8">
+            <div class="flex justify-around">
+              <div>
+                <div class="flex flex-col justify-center h-full">
+                  <p class="text-grey-darkest h4">
+                    what i'm all about
                   </p>
-                  <p class="body">
-                    And I like to build things.
+                  <p class="text-grey-darkest body">
+                    I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others. I have also dabbled in 3D graphics engine programming as a hobby. Oh, and did I mention that I love cooking?
                   </p>
-                </div>
-                <div
-                  :style="{width: '100%'}"
-                  class="flex flex-col justify-center"
-                >
-                  <lego-grid
-                    class="mx-auto"
-                    :lego-bricks="brickList"
-                    :scaling-factor="scalingFactor"
-                  />
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- <button
-            class="next"
-            @click="$refs.fullpage.api.moveSectionDown()"
-          >
-            Next
-          </button>
-          <p class="font-body">
-            Section 1
-          </p> -->
-        </div>
-        <div class="section">
-          <button
-            class="prev"
-            @click="$refs.fullpage.api.moveSectionUp()"
-          >
-            Prev
-          </button>
-          Section 2
         </div>
       </full-page>
     </client-only>
@@ -65,7 +60,7 @@ export default {
 
   data () {
     return {
-      scalingFactor: 0.9,
+      scalingFactor: 0.7,
       options: {
         licenseKey: process.env.FULLPAGE_KEY,
         navigation: true,
@@ -143,6 +138,37 @@ export default {
         {
           color: 'light-blue'
         },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
         {
           color: 'light-blue'
         },

@@ -90,7 +90,7 @@ export default {
       resetZIndex = resetZIndex.bind(this)
 
       this.$anime.set('.legoBrick', {
-        translateY: -350,
+        translateY: -600,
         zIndex: '+=51'
       })
 
