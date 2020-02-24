@@ -85,5 +85,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    FULLPAGE_KEY: process.env.FULLPAGE_KEY
   }
 }
