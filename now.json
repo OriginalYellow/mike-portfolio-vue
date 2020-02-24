@@ -3,7 +3,7 @@
   "build": {
     "env": {
       "FULLPAGE_KEY": "@fullpage-key",
-      "SCROLL_HORIZONTALLY_KEY": "@fullpage-key"
+      "SCROLL_HORIZONTALLY_KEY": "@scroll-horizontally-key"
     }
   }
 }

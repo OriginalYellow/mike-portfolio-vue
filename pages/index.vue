@@ -35,14 +35,26 @@
         </div>
 
         <div class="section">
-          <div class="container px-16 md:px-64">
+          <div class="slide">
+            <h1>Section 3</h1>
+          </div>
+          <div class="slide">
+            <h1>Slide 3.2</h1>
+          </div>
+          <div class="slide">
+            <h1>Slide 3.3</h1>
+          </div>
+          <div class="slide">
+            <h1>Slide 3.4</h1>
+          </div>
+          <!-- <div class="container px-16 md:px-64">
             <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
               stuff i've built
             </h1>
             <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
               [coming soon]
             </p>
-          </div>
+          </div> -->
         </div>
       </full-page>
     </client-only>
@@ -70,8 +82,6 @@ export default {
           config.theme.colors.lightGreen,
           config.theme.colors.indigo,
           config.theme.colors.lightRed
-          // '#23F0C7'
-          // '#DDC4DD'
         ]
       }
     }
