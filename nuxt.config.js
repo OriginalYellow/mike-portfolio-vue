@@ -34,8 +34,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/fullpage', mode: 'client' }
-    // '~/plugins/typeface'
+    { src: '~/plugins/fullpage', mode: 'client' },
+    '~/plugins/anime.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -54,7 +54,21 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-svg-loader',
+    [
+      'nuxt-mq',
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
+        breakpoints: {
+          sm: 576,
+          md: 768,
+          lg: 992,
+          xl: Infinity
+        }
+      }
+    ]
   ],
   /*
   ** Axios module configuration

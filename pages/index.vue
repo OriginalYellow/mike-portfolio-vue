@@ -10,16 +10,14 @@
             <div class="container mx-auto md:px-32 px-8">
               <div class="flex justify-between py-24">
                 <div :style="{width: '100%'}">
-                  <!-- <p class="leading-4 text-base"> -->
                   <p class="h3">
                     hi, i'm mike
                   </p>
-                  <!-- <p class="leading-3 text-sm"> -->
                   <p class="body">
                     And I like to build things.
                   </p>
                 </div>
-                <!-- <div
+                <div
                   :style="{width: '100%'}"
                   class="flex flex-col justify-center"
                 >
@@ -28,7 +26,7 @@
                     :lego-bricks="brickList"
                     :scaling-factor="scalingFactor"
                   />
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
@@ -58,9 +56,16 @@
 </template>
 
 <script>
+import LegoGrid from '~/components/LegoGrid'
+
 export default {
+  components: {
+    LegoGrid
+  },
+
   data () {
     return {
+      scalingFactor: 0.9,
       options: {
         licenseKey: process.env.FULLPAGE_KEY,
         navigation: true,
@@ -76,6 +81,103 @@ export default {
           '#ba5be9',
           '#b4b8ab'
         ]
+      }
+    }
+  },
+
+  computed: {
+    fullBrickList: () => [
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ],
+      [
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        },
+        {
+          color: 'light-blue'
+        }
+      ]
+    ],
+
+    mdBrickList () {
+      return this.fullBrickList.slice(0, 4)
+    },
+
+    smBrickList () {
+      return this.fullBrickList.slice(0, 3)
+    },
+
+    brickList () {
+      console.log(`$mq is ${this.$mq}`)
+
+      switch (this.$mq) {
+        case 'xl':
+        case 'lg':
+          return this.fullBrickList
+        case 'md':
+          return this.mdBrickList
+        case 'sm':
+          return this.smBrickList
+        case 'default':
+          return this.smBrickList
+        default:
+          throw new Error('something went wrong with the breakpoints...')
       }
     }
   }
