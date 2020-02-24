@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "env": {
+    "FULLPAGE_KEY": "@fullpage-key"
+  }
+}
