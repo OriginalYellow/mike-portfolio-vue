@@ -131,7 +131,7 @@ export default {
     scalingFactor () {
       switch (this.$mq) {
         case 'sm':
-          return 2
+          return 1.8
         default:
           return 2.8
       }
