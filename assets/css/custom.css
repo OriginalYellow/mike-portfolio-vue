@@ -1,11 +1,11 @@
 /* purgecss start ignore */
 @import 'fullpage.js/dist/fullpage.min.css';
-/* purgecss end ignore */
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: #131313 !important;
 }
+/* purgecss end ignore */
 
 html, body {
   font-size: 10px;
