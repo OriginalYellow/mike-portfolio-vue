@@ -5,7 +5,7 @@
   "author": "Michael Joseph",
   "private": true,
   "scripts": {
-    "dev": "cross-env HOST=10.0.75.1 nuxt",
+    "dev": "cross-env HOST=127.0.0.1 nuxt",
     "build": "nuxt generate",
     "start": "nuxt start",
     "generate": "nuxt generate",

@@ -62,6 +62,8 @@ export default {
     return {
       options: {
         licenseKey: process.env.FULLPAGE_KEY,
+        scrollHorizontallyKey: process.env.SCROLL_HORIZONTALLY_KEY,
+        scrollHorizontally: true,
         navigation: true,
         anchors: ['page1', 'page2', 'page3'],
         sectionsColor: [

@@ -60,6 +60,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/fullpage', mode: 'client' },
+    { src: '~/plugins/scrollHorizontally', mode: 'client' },
     '~/plugins/anime.js'
   ],
   /*
@@ -113,6 +114,7 @@ export default {
   },
   // https://github.com/nuxt/now-builder/issues/44
   env: {
-    FULLPAGE_KEY: process.env.FULLPAGE_KEY
+    FULLPAGE_KEY: process.env.FULLPAGE_KEY,
+    SCROLL_HORIZONTALLY_KEY: process.env.SCROLL_HORIZONTALLY_KEY
   }
 }
