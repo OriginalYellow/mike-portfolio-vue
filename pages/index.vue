@@ -6,7 +6,7 @@
         :options="options"
       >
         <div class="section">
-          <div class="container pl-8 pr-32 md:px-64">
+          <div class="container pl-8 pr-24 md:px-64">
             <div class="md:mb-0 mb-24">
               <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
                 hi, <br v-if="$mq === 'sm'">i'm mike
@@ -25,7 +25,7 @@
         </div>
 
         <div class="section">
-          <div class="container pl-8 pr-32 md:px-64">
+          <div class="container pl-8 pr-24 md:px-64">
             <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
               what i'm all about
             </h1>
@@ -37,7 +37,7 @@
 
         <div class="section">
           <div class="slide">
-            <div class="container pl-8 pr-32 md:px-64">
+            <div class="container pl-8 pr-24 md:px-64">
               <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
                 things <br v-if="$mq === 'sm'">i've built
               </h1>
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="slide">
-            <div class="container pl-8 pr-32 md:px-64">
+            <div class="container pl-8 pr-24 md:px-64">
               <h2 :class="{'h3': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h5': ($mq === 'sm') || ($mq === 'default') }">
                 <a
                   href="https://thesociety.app/"
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="slide">
-            <div class="container pl-8 pr-32 md:px-64">
+            <div class="container pl-8 pr-24 md:px-64">
               <h2 :class="{'h3': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h5': ($mq === 'sm') || ($mq === 'default') }">
                 <a
                   href="https://bccharity.org/"
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="slide">
-            <div class="container pl-8 pr-32 md:px-64">
+            <div class="container pl-8 pr-24 md:px-64">
               <h2 :class="{'h3': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h5': ($mq === 'sm') || ($mq === 'default') }">
                 <a
                   href="https://member.buzz/"
