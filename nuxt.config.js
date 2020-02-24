@@ -1,3 +1,6 @@
+const title = 'Michael Joseph: the one-man app-building army'
+const description = 'Michael Joseph\'s personal development portfolio and blog'
+const siteName = 'Michael Joseph, Developer'
 
 export default {
   mode: 'universal',
@@ -5,11 +8,34 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: description },
+      {
+        name: 'og:title',
+        hid: 'og:title',
+        content: title
+      },
+      {
+        name: 'og:site_name',
+        hid: 'og:site_name',
+        content: siteName
+      },
+      {
+        name: 'og:description',
+        hid: 'og:description',
+        content: description
+      },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://michaeljoseph.dev' },
+      { name: 'og:image', content: '/favicon.png' },
+      {
+        name: 'apple-mobile-web-app-title',
+        hid: 'apple-mobile-web-app-title',
+        content: title
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
