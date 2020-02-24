@@ -1,3 +1,7 @@
+/* purgecss start ignore */
+@import 'fullpage.js/dist/fullpage.min.css';
+/* purgecss end ignore */
+
 html, body {
   font-size: 10px;
 }

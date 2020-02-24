@@ -88,5 +88,8 @@ export default {
   },
   env: {
     FULLPAGE_KEY: process.env.FULLPAGE_KEY
+  },
+  purgeCSS: {
+    whitelist: ['css-selector-to-whitelist']
   }
 }
