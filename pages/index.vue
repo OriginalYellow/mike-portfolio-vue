@@ -36,16 +36,44 @@
 
         <div class="section">
           <div class="slide">
-            <h1>Section 3</h1>
+            <div class="container px-16 md:px-64">
+              <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
+                what i'm all about
+              </h1>
+              <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
+                I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others.
+              </p>
+            </div>
           </div>
           <div class="slide">
-            <h1>Slide 3.2</h1>
+            <div class="container px-16 md:px-64">
+              <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
+                what i'm all about
+              </h1>
+              <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
+                I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others.
+              </p>
+            </div>
           </div>
           <div class="slide">
-            <h1>Slide 3.3</h1>
+            <div class="container px-16 md:px-64">
+              <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
+                what i'm all about
+              </h1>
+              <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
+                I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others.
+              </p>
+            </div>
           </div>
           <div class="slide">
-            <h1>Slide 3.4</h1>
+            <div class="container px-16 md:px-64">
+              <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
+                what i'm all about
+              </h1>
+              <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
+                I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others.
+              </p>
+            </div>
           </div>
           <!-- <div class="container px-16 md:px-64">
             <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
@@ -77,6 +105,8 @@ export default {
         scrollHorizontallyKey: process.env.SCROLL_HORIZONTALLY_KEY,
         scrollHorizontally: true,
         navigation: true,
+        slidesNavigation: true,
+        controlArrows: false,
         anchors: ['page1', 'page2', 'page3'],
         sectionsColor: [
           config.theme.colors.lightGreen,

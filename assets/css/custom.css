@@ -3,11 +3,18 @@
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: #1C0B19 !important;
+  background: #1C0B19 !important;
 }
+
+.fp-slidesNav {
+  text-align: center;
+}
+
+
 /* purgecss end ignore */
 
-html, body {
+html,
+body {
   font-size: 10px;
 }
 
