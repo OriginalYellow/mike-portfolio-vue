@@ -52,6 +52,7 @@
                 <a
                   href="https://thesociety.app/"
                   target="_blank"
+                  class="underline"
                 >thesociety.app</a>
               </h2>
               <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
@@ -65,6 +66,7 @@
                 <a
                   href="https://bccharity.org/"
                   target="_blank"
+                  class="underline"
                 >bccharity.org</a>
               </h2>
               <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
@@ -78,6 +80,7 @@
                 <a
                   href="https://member.buzz/"
                   target="_blank"
+                  class="underline"
                 >member.buzz</a>
               </h2>
               <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
