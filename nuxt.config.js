@@ -27,8 +27,7 @@ export default {
   ** Global CSS
   */
   css: [
-    'fullpage.js/dist/fullpage.min.css',
-    '~/assets/css/main.css'
+    '~/assets/css/custom.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -86,10 +85,8 @@ export default {
     extend (config, ctx) {
     }
   },
+  // https://github.com/nuxt/now-builder/issues/44
   env: {
     FULLPAGE_KEY: process.env.FULLPAGE_KEY
-  },
-  purgeCSS: {
-    whitelist: ['css-selector-to-whitelist']
   }
 }

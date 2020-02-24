@@ -9,9 +9,9 @@
           <div class="container mx-auto md:px-32 px-8">
             <div class="flex justify-between py-24">
               <div :style="{width: '100%'}">
-                <p class="h4">
+                <h1 class="h4">
                   hi, i'm mike
-                </p>
+                </h1>
                 <p class="body">
                   And I like to build things.
                 </p>
@@ -34,9 +34,9 @@
             <div class="flex justify-around">
               <div>
                 <div class="flex flex-col justify-center h-full">
-                  <p class="text-grey-darkest h4">
+                  <h1 class="text-grey-darkest h4">
                     what i'm all about
-                  </p>
+                  </h1>
                   <p class="text-grey-darkest body">
                     I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others. I have also dabbled in 3D graphics engine programming as a hobby. Oh, and did I mention that I love cooking?
                   </p>
@@ -190,8 +190,6 @@ export default {
     },
 
     brickList () {
-      console.log(`$mq is ${this.$mq}`)
-
       switch (this.$mq) {
         case 'xl':
         case 'lg':
