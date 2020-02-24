@@ -1,4 +1,4 @@
-const title = 'Michael Joseph: the one-man app-building army'
+const title = 'Michael Joseph, Developer'
 const description = 'Michael Joseph\'s personal development portfolio and blog'
 const siteName = 'Michael Joseph, Developer'
 
@@ -30,7 +30,7 @@ export default {
       },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://michaeljoseph.dev' },
-      { name: 'og:image', content: '/favicon.png' },
+      { name: 'og:image', content: '/icon.png' },
       {
         name: 'apple-mobile-web-app-title',
         hid: 'apple-mobile-web-app-title',
