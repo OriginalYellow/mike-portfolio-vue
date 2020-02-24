@@ -27,7 +27,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'fullpage.js/dist/fullpage.min.css'
+    'fullpage.js/dist/fullpage.min.css',
+    '~/assets/css/main.css'
   ],
   /*
   ** Plugins to load before mounting the App

@@ -6,13 +6,42 @@
         :options="options"
       >
         <div class="section">
-          <button
+          <div class="">
+            <div class="container mx-auto md:px-32 px-8">
+              <div class="flex justify-between py-24">
+                <div :style="{width: '100%'}">
+                  <!-- <p class="leading-4 text-base"> -->
+                  <p class="h3">
+                    hi, i'm mike
+                  </p>
+                  <!-- <p class="leading-3 text-sm"> -->
+                  <p class="body">
+                    And I like to build things.
+                  </p>
+                </div>
+                <!-- <div
+                  :style="{width: '100%'}"
+                  class="flex flex-col justify-center"
+                >
+                  <lego-grid
+                    class="mx-auto"
+                    :lego-bricks="brickList"
+                    :scaling-factor="scalingFactor"
+                  />
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <button
             class="next"
             @click="$refs.fullpage.api.moveSectionDown()"
           >
             Next
           </button>
-          Section 1
+          <p class="font-body">
+            Section 1
+          </p> -->
         </div>
         <div class="section">
           <button
