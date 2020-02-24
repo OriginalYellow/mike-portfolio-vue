@@ -6,39 +6,32 @@
         :options="options"
       >
         <div class="section">
-          <div class="container mx-auto md:px-32 px-8">
-            <div class="flex justify-between py-24">
-              <div :style="{width: '100%'}">
-                <h1 class="h4">
-                  hi, i'm mike
-                </h1>
-                <p class="body">
-                  And I like to build things.
-                </p>
-              </div>
-              <div
-                :style="{width: '100%'}"
-                class="flex flex-col justify-center"
-              >
-                <lego-grid
-                  class="mx-auto"
-                  :lego-bricks="brickList"
-                  :scaling-factor="scalingFactor"
-                />
-              </div>
+          <div class="container px-16 md:px-64">
+            <div class="md:mb-0 mb-24">
+              <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
+                hi, <br v-if="$mq === 'sm'">i'm mike
+              </h1>
+              <p :class="{'h5': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body': ($mq === 'sm') || ($mq === 'default') }">
+                And I like to build things.
+              </p>
             </div>
+            <lego-grid
+              class="lg:ml-64 lg:pl-64"
+              :lego-bricks="brickList"
+              :scaling-factor="scalingFactor"
+            />
           </div>
         </div>
         <div class="section">
-          <div class="mx-auto py-32 container mx-auto md:px-32 px-8">
+          <div class="container px-16 md:px-64">
             <div class="flex justify-around">
               <div>
                 <div class="flex flex-col justify-center h-full">
-                  <h1 class="text-grey-darkest h4">
+                  <h1 :class="{'h1': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'h3': ($mq === 'sm') || ($mq === 'default') }">
                     what i'm all about
                   </h1>
-                  <p class="text-grey-darkest body">
-                    I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others. I have also dabbled in 3D graphics engine programming as a hobby. Oh, and did I mention that I love cooking?
+                  <p :class="{'body': ($mq === 'md') || ($mq === 'lg') || ($mq === 'xl'), 'body-2': ($mq === 'sm') || ($mq === 'default') }">
+                    I am a design-conscious developer who specializes in advanced UI and front-end programming. I’ve often had to dive into the more advanced aspects of UI programming with different frameworks, platforms, and languages in order to execute a designer’s vision, and I love the challenge. Having worked at a number of startups, my experience also includes roles where I’ve had to wear many different hats – project manager, data architect, product designer, UX designer, and visual designer among others.
                   </p>
                 </div>
               </div>
@@ -52,6 +45,7 @@
 
 <script>
 import LegoGrid from '~/components/LegoGrid'
+import config from '~/tailwind.config'
 
 export default {
   components: {
@@ -60,13 +54,12 @@ export default {
 
   data () {
     return {
-      scalingFactor: 0.7,
       options: {
         licenseKey: process.env.FULLPAGE_KEY,
         navigation: true,
         anchors: ['page1', 'page2', 'page3'],
         sectionsColor: [
-          '#41b883',
+          config.theme.colors.indigo,
           '#ff5f45',
           '#0798ec',
           '#fec401',
@@ -81,6 +74,15 @@ export default {
   },
 
   computed: {
+    scalingFactor () {
+      switch (this.$mq) {
+        case 'sm':
+          return 2
+        default:
+          return 2.8
+      }
+    },
+
     fullBrickList: () => [
       [
         {
@@ -147,53 +149,62 @@ export default {
         {
           color: 'light-blue'
         }
-      ],
-      [
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        }
-      ],
-      [
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        },
-        {
-          color: 'light-blue'
-        }
       ]
+      // [
+      //   {
+      //     color: 'light-blue'
+      //   },
+      //   {
+      //     color: 'grey'
+      //   },
+      //   {
+      //     color: 'grey'
+      //   },
+      //   {
+      //     color: 'light-blue'
+      //   },
+      //   {
+      //     color: 'light-blue'
+      //   },
+      //   {
+      //     color: 'grey'
+      //   }
+      // ],
+      // [
+      //   {
+      //     color: 'light-blue'
+      //   },
+      //   {
+      //     color: 'grey'
+      //   },
+      //   {
+      //     color: 'light-blue'
+      //   }
+      // ]
     ],
 
-    mdBrickList () {
+    xlBrickList () {
+      return this.fullBrickList.slice(0, 6)
+    },
+
+    lgBrickList () {
       return this.fullBrickList.slice(0, 4)
     },
 
-    smBrickList () {
+    mdBrickList () {
       return this.fullBrickList.slice(0, 3)
+    },
+
+    smBrickList () {
+      return this.fullBrickList.slice(0, 2)
     },
 
     brickList () {
       switch (this.$mq) {
         case 'xl':
+          return this.xlBrickList
         case 'lg':
-          return this.fullBrickList
+          return this.lgBrickList
         case 'md':
           return this.mdBrickList
         case 'sm':

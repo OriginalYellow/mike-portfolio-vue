@@ -1,9 +1,11 @@
 <template>
+  <!-- eslint-disable vue/attribute-hyphenation -->
   <lego
     :class="legoClass"
     :style="legoStyle"
-    :view-box="viewBox"
+    :viewBox="viewBox"
   />
+  <!--eslint-enable-->
 </template>
 
 <script>
@@ -48,7 +50,7 @@ export default {
       const zIndexOffset = 1
 
       const width = this.originalWidth * this.scalingFactor
-      const height = this.originalHeight * this.scalingFactor
+      const height = this.originalHeight * this.scalingFactor - 5
       const sideHeight = this.originalSideHeight * this.scalingFactor
 
       const colors = {
@@ -57,7 +59,8 @@ export default {
         red: 'hue-rotate(165deg)',
         green: 'hue-rotate(300deg)',
         blue2: 'hue-rotate(20deg)',
-        blue3: 'hue-rotate(40deg)'
+        blue3: 'hue-rotate(40deg)',
+        grey: 'saturate(0%)'
       }
 
       return {
@@ -71,7 +74,7 @@ export default {
     },
 
     viewBox () {
-      return `0 0 ${this.originalWidth} ${this.originalHeight}`
+      return `0 0 ${this.originalWidth + 0} ${this.originalHeight}`
     },
 
     originalWidth: () => 60.203,

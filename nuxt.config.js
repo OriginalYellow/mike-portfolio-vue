@@ -63,7 +63,7 @@ export default {
         breakpoints: {
           sm: 576,
           md: 768,
-          lg: 992,
+          lg: 1450,
           xl: Infinity
         }
       }

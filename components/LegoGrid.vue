@@ -2,10 +2,7 @@
   <!-- MIKE: there is a small bug where if you go from sm to lg or xl too fast,
   the initial call to anime.set won't target the new elements -->
 
-  <!-- NOTE: for some reason "relative" doesn't seem to be doing anything but im
-  keeping it here anyway just cuz -->
   <div
-    class="relative"
     :style="gridStyle"
   >
     <div
@@ -90,7 +87,7 @@ export default {
       resetZIndex = resetZIndex.bind(this)
 
       this.$anime.set('.legoBrick', {
-        translateY: -600,
+        translateY: -900,
         zIndex: '+=51'
       })
 
