@@ -12,12 +12,12 @@ module.exports = {
       body: ['IBM Plex Mono', 'Courier New', 'monospace']
     },
     colors: {
-      indigo: '#5c6ac4',
-      blue: '#007ace',
-      red: '#de3618'
+      indigo: '#6A77C9',
+      lightRed: '#FF6D55',
+      lightGreen: '#A1CCA5'
     },
     textColor: {
-      primary: '#131313'
+      primary: '#1C0B19'
     }
   },
   variants: {
