@@ -1,6 +1,12 @@
 /* purgecss start ignore */
 @import 'fullpage.js/dist/fullpage.min.css';
 
+@media screen and (min-width: 576px) {
+  #fp-nav.fp-right {
+    right: 24px !important;
+  }
+}
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: #1C0B19 !important;
@@ -9,8 +15,6 @@
 .fp-slidesNav {
   text-align: center;
 }
-
-
 /* purgecss end ignore */
 
 html,
