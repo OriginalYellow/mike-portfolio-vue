@@ -1,6 +1,26 @@
 <template>
   <div>
     <client-only>
+      <div
+        id="links"
+        class="fixed top-24 right-24"
+      >
+        <a
+          href="https://github.com/OriginalYellow"
+          target="_blank"
+          class="cursor-pointer"
+        >
+          <mdi-github class="w-16 h-16 md:w-24 md:h-24 mr-4 md:mr-0 md:mb-8 inline md:block" />
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1TrOl_7SPbt52WH47M0SHidCBC5nzhg_cBnHirUqCTDY/edit?usp=sharing"
+          target="_blank"
+          class="cursor-pointer"
+        >
+          <mdi-file-account class="w-16 h-16 md:w-24 md:h-24 inline md:block" />
+        </a>
+      </div>
+
       <full-page
         ref="fullpage"
         :options="options"
@@ -103,12 +123,16 @@
 </template>
 
 <script>
+import MdiFileAccount from '~/assets/file-account.svg'
+import MdiGithub from '~/assets/github.svg'
 import LegoGrid from '~/components/LegoGrid'
 import config from '~/tailwind.config'
 
 export default {
   components: {
-    LegoGrid
+    LegoGrid,
+    MdiFileAccount,
+    MdiGithub
   },
 
   data () {
@@ -120,6 +144,7 @@ export default {
         navigation: true,
         slidesNavigation: true,
         controlArrows: false,
+        fixedElements: ['#links'],
         anchors: ['page1', 'page2', 'page3'],
         sectionsColor: [
           config.theme.colors.lightGreen,

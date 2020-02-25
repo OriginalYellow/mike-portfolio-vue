@@ -18,11 +18,18 @@ module.exports = {
     },
     textColor: {
       primary: '#1C0B19'
+    },
+    inset: {
+      0: 0,
+      '1/2': '50%',
+      24: '24px'
     }
   },
   variants: {
     margin: ['responsive'],
-    padding: ['responsive']
+    padding: ['responsive'],
+    width: ['responsive'],
+    display: ['responsive']
   },
   plugins: []
 }
