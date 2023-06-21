@@ -18,7 +18,7 @@
     "@mdi/js": "^4.9.95",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-mq": "^2.0.1",
     "nuxt-svg-loader": "^1.2.0",
     "vue-animejs": "^2.1.1",
